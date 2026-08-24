@@ -1,0 +1,38 @@
+# essprmsc.com — application registry
+# Update github_repo with your org/repo names. This file is the source of truth.
+
+domain: essprmsc.com
+registrar: Nayatel  # domain panel → Manage DNS
+
+applications:
+  - slug: mrv-system
+    name: MRV System
+    fqdn: mrv-system.essprmsc.com
+    vm_ip: 101.50.87.168
+    github_repo: YOUR_ORG/prmsc-mrv
+    vm_app_path: ~/PRMSC-ENS-MRV
+    tls_strategy: docker-certs       # certs in deploy/certs/, HTTPS in container nginx
+    env_public_origin: PUBLIC_ORIGIN # must match https://mrv-system.essprmsc.com
+    health_check: curl -I https://mrv-system.essprmsc.com/api/health
+
+  - slug: esms
+    name: ESMS (Work Force Management)
+    fqdn: esms.essprmsc.com
+    vm_ip: 115.186.164.190
+    github_repo: YOUR_ORG/wfm-esms
+    vm_app_path: ~/wfm
+    tls_strategy: host-nginx-certbot # host nginx :443 → docker 127.0.0.1:8080
+    env_public_origin: null          # same-origin /api — no CORS change
+    health_check: curl -I https://esms.essprmsc.com/healthz
+
+  - slug: wqms
+    name: WQMS (Water Quality)
+    fqdn: wqms.essprmsc.com
+    vm_ip: 101.50.84.115
+    github_repo: YOUR_ORG/wqms
+    vm_app_path: ~/wqms
+    tls_strategy: host-nginx-certbot
+    env_public_origin: null
+    health_check: curl -I https://wqms.essprmsc.com/healthz
+
+# Future apps: copy an entry above, add DNS A record, follow runbooks/add-new-application.md
