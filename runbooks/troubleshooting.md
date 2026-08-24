@@ -4,7 +4,7 @@
 
 | Symptom | Fix |
 |---------|-----|
-| `dig` returns nothing | Wait for propagation; check Host field is `mrv-system` not `mrv-system.essprmsc.com` |
+| `dig` returns nothing | Wait for propagation; check Host field is `mrv` not `mrv.essprmsc.com` |
 | Wrong IP returned | Edit A record in domain panel |
 
 ## Connection
@@ -20,8 +20,9 @@
 | Symptom | Fix |
 |---------|-----|
 | Certbot connection refused | Port 80 must be reachable from internet; stop conflicting services during standalone mode |
+| Certbot **CAA SERVFAIL** | Add DNS CAA on `@`: `0 issue "letsencrypt.org"` (Nayatel nameserver bug) |
 | Certbot nginx plugin fails | Run `sudo nginx -t`; remove default site; ensure `server_name` matches domain |
-| MRV HTTPS works but CORS error | `PUBLIC_ORIGIN` must be exactly `https://mrv-system.essprmsc.com` (no trailing slash) |
+| MRV HTTPS works but CORS error | `PUBLIC_ORIGIN` must be exactly `https://mrv.essprmsc.com` (no trailing slash) |
 
 ## Application
 
@@ -35,7 +36,7 @@
 
 ```bash
 # DNS
-dig +short mrv-system.essprmsc.com
+dig +short mrv.essprmsc.com
 
 # On VM — stack status
 docker compose ps

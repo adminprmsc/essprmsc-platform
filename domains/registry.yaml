@@ -5,15 +5,15 @@ domain: essprmsc.com
 registrar: Nayatel  # domain panel → Manage DNS
 
 applications:
-  - slug: mrv-system
+  - slug: mrv
     name: MRV System
-    fqdn: mrv-system.essprmsc.com
+    fqdn: mrv.essprmsc.com
     vm_ip: 101.50.87.168
     github_repo: YOUR_ORG/prmsc-mrv
     vm_app_path: ~/PRMSC-ENS-MRV
     tls_strategy: docker-certs       # certs in deploy/certs/, HTTPS in container nginx
-    env_public_origin: PUBLIC_ORIGIN # must match https://mrv-system.essprmsc.com
-    health_check: curl -I https://mrv-system.essprmsc.com/api/health
+    env_public_origin: PUBLIC_ORIGIN # must match https://mrv.essprmsc.com
+    health_check: curl -I https://mrv.essprmsc.com/api/health
 
   - slug: esms
     name: ESMS (Work Force Management)

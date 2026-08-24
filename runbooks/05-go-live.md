@@ -12,7 +12,7 @@ Confirm everything works, notify the team, retire raw IP bookmarks.
 
 | URL | Login | API / data loads |
 |-----|-------|------------------|
-| https://mrv-system.essprmsc.com | ⬜ | ⬜ |
+| https://mrv.essprmsc.com | ⬜ | ⬜ |
 | https://esms.essprmsc.com | ⬜ | ⬜ |
 | https://wqms.essprmsc.com | ⬜ | ⬜ |
 
@@ -27,7 +27,7 @@ Send message template:
 ```
 PRMSC applications are now available on essprmsc.com:
 
-• MRV System:  https://mrv-system.essprmsc.com
+• MRV System:  https://mrv.essprmsc.com
 • ESMS:        https://esms.essprmsc.com
 • WQMS:        https://wqms.essprmsc.com
 

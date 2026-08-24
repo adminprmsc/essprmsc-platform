@@ -19,7 +19,7 @@ Confirm each subdomain reaches the correct app **over HTTP** before enabling HTT
 ## Test from your Mac
 
 ```bash
-curl -I http://mrv-system.essprmsc.com
+curl -I http://mrv.essprmsc.com
 curl -I http://esms.essprmsc.com
 curl -I http://wqms.essprmsc.com
 ```

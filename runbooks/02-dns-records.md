@@ -26,13 +26,13 @@ Add **three** A records:
 
 | Host / Name | Type | Value |
 |-------------|------|-------|
-| `mrv-system` | A | `101.50.87.168` |
+| `mrv` | A | `101.50.87.168` |
 | `esms` | A | `115.186.164.190` |
 | `wqms` | A | `101.50.84.115` |
 
 TTL: `300` or default.
 
-- [ ] `mrv-system` record added
+- [ ] `mrv` record added
 - [ ] `esms` record added
 - [ ] `wqms` record added
 - [ ] Saved / applied
@@ -50,7 +50,7 @@ Usually **5–30 minutes**. Can take up to 24 hours in rare cases.
 ## Step 1.6–1.8 — Verify from your Mac
 
 ```bash
-dig +short mrv-system.essprmsc.com
+dig +short mrv.essprmsc.com
 dig +short esms.essprmsc.com
 dig +short wqms.essprmsc.com
 ```
@@ -67,7 +67,7 @@ Expected output:
 - [ ] ESMS DNS correct
 - [ ] WQMS DNS correct
 
-If wrong or empty, wait longer or double-check record names (no `essprmsc.com` suffix in Host field — usually just `mrv-system`).
+If wrong or empty, wait longer or double-check record names (no `essprmsc.com` suffix in Host field — usually just `mrv`).
 
 ---
 

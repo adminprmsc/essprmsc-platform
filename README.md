@@ -8,7 +8,7 @@ Application code lives in **separate GitHub repos**. This repo is the single sou
 
 | App | URL | VM IP | Application repo |
 |-----|-----|-------|------------------|
-| MRV System | https://mrv-system.essprmsc.com | `101.50.87.168` | `prmsc-mrv` (separate repo) |
+| MRV System | https://mrv.essprmsc.com | `101.50.87.168` | `prmsc-mrv` (separate repo) |
 | ESMS | https://esms.essprmsc.com | `115.186.164.190` | `wfm-esms` (separate repo) |
 | WQMS | https://wqms.essprmsc.com | `101.50.84.115` | `wqms` (separate repo) |
 

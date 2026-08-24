@@ -4,7 +4,7 @@ Part of [MASTER-CHECKLIST.md](MASTER-CHECKLIST.md) · Phase 4a
 
 | | |
 |---|---|
-| **URL** | https://mrv-system.essprmsc.com |
+| **URL** | https://mrv.essprmsc.com |
 | **VM IP** | `101.50.87.168` |
 | **Repo** | `prmsc-mrv` (separate GitHub repo) |
 | **TLS strategy** | Certs inside Docker nginx (`deploy/certs/`) |
@@ -33,7 +33,7 @@ sudo apt-get update
 sudo apt-get install -y certbot
 
 sudo certbot certonly --standalone \
-  -d mrv-system.essprmsc.com \
+  -d mrv.essprmsc.com \
   --agree-tos \
   -m admin@essprmsc.com
 ```
@@ -45,8 +45,8 @@ sudo certbot certonly --standalone \
 ## Step 4a.3 — Copy certs into project
 
 ```bash
-sudo cp /etc/letsencrypt/live/mrv-system.essprmsc.com/fullchain.pem deploy/certs/
-sudo cp /etc/letsencrypt/live/mrv-system.essprmsc.com/privkey.pem deploy/certs/
+sudo cp /etc/letsencrypt/live/mrv.essprmsc.com/fullchain.pem deploy/certs/
+sudo cp /etc/letsencrypt/live/mrv.essprmsc.com/privkey.pem deploy/certs/
 sudo chown $(whoami):$(whoami) deploy/certs/*.pem
 ```
 
@@ -59,7 +59,7 @@ sudo chown $(whoami):$(whoami) deploy/certs/*.pem
 Edit `deploy/nginx/default.conf`:
 
 1. **Uncomment** the entire `server { listen 443 ssl ... }` block (lines 42–71)
-2. Confirm `server_name mrv-system.essprmsc.com;`
+2. Confirm `server_name mrv.essprmsc.com;`
 
 - [ ] HTTPS block uncommented
 
@@ -84,8 +84,8 @@ Edit `docker-compose.yml` — under the `nginx` service `ports:` section, add:
 Edit `.env.docker`:
 
 ```env
-PUBLIC_ORIGIN=https://mrv-system.essprmsc.com
-PASSWORD_RESET_FRONTEND_URL=https://mrv-system.essprmsc.com
+PUBLIC_ORIGIN=https://mrv.essprmsc.com
+PASSWORD_RESET_FRONTEND_URL=https://mrv.essprmsc.com
 ```
 
 No trailing slash. Must be `https` after cert is live.
@@ -109,8 +109,8 @@ docker compose --env-file .env.docker ps
 ## Step 4a.9 — Verify HTTPS
 
 ```bash
-curl -I https://mrv-system.essprmsc.com
-curl -I https://mrv-system.essprmsc.com/api/health
+curl -I https://mrv.essprmsc.com
+curl -I https://mrv.essprmsc.com/api/health
 ```
 
 - [ ] HTTPS returns 200/301/302
@@ -120,7 +120,7 @@ curl -I https://mrv-system.essprmsc.com/api/health
 
 ## Step 4a.10 — Browser test
 
-1. Open https://mrv-system.essprmsc.com in incognito
+1. Open https://mrv.essprmsc.com in incognito
 2. Log in
 3. Open DevTools → Console — **no CORS errors**
 
@@ -139,8 +139,8 @@ Create `/etc/letsencrypt/renewal-hooks/deploy/mrv-copy-certs.sh`:
 #!/bin/bash
 set -euo pipefail
 APP=~/PRMSC-ENS-MRV
-cp /etc/letsencrypt/live/mrv-system.essprmsc.com/fullchain.pem "$APP/deploy/certs/"
-cp /etc/letsencrypt/live/mrv-system.essprmsc.com/privkey.pem "$APP/deploy/certs/"
+cp /etc/letsencrypt/live/mrv.essprmsc.com/fullchain.pem "$APP/deploy/certs/"
+cp /etc/letsencrypt/live/mrv.essprmsc.com/privkey.pem "$APP/deploy/certs/"
 docker compose -f "$APP/docker-compose.yml" --env-file "$APP/.env.docker" exec nginx nginx -s reload
 ```
 
