@@ -10,12 +10,14 @@ Configure in your domain panel: **My Services → Domains List → essprmsc.com 
 | A | `esms` | `115.186.164.190` | 300 |
 | A | `wqms` | `101.50.84.115` | 300 |
 
-## Optional
+## Portal (root domain — optional)
 
-| Type | Host / Name | Value | Purpose |
-|------|-------------|-------|---------|
-| A | `@` | TBD | Root domain landing page (add later) |
-| A | `www` | TBD | Redirect to portal or main app |
+| Type | Host / Name | Value | Notes |
+|------|-------------|-------|-------|
+| A | `@` | `<portal-vm-ip>` | Serves `landing/` SPA from essprmsc-platform |
+| A | `www` | `<portal-vm-ip>` | Optional redirect to `@` |
+
+Build: `cd landing && npm run build` — deploy `dist/` or Docker image.
 
 ## Verify (run from your Mac after saving)
 

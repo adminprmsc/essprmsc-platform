@@ -5,6 +5,16 @@ domain: essprmsc.com
 registrar: Nayatel  # domain panel → Manage DNS
 
 applications:
+  - slug: portal
+    name: PRMSC Portal (landing)
+    fqdn: essprmsc.com
+    vm_ip: TBD
+    github_repo: YOUR_ORG/essprmsc-platform
+    vm_app_path: ~/essprmsc-platform/landing
+    tls_strategy: host-nginx-certbot
+    env_public_origin: null
+    health_check: curl -I http://essprmsc.com
+
   - slug: mrv
     name: MRV System
     fqdn: mrv.essprmsc.com

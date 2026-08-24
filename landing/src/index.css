@@ -1,0 +1,54 @@
+@import '@fontsource-variable/geist';
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Geist Variable', 'Geist', ui-sans-serif, system-ui, sans-serif;
+
+  /* PRMSC logo palette */
+  --color-prmsc-navy: #0a2d5c;
+  --color-prmsc-navy-deep: #061e3d;
+  --color-prmsc-blue: #1565c0;
+  --color-prmsc-blue-bright: #2196f3;
+  --color-prmsc-blue-light: #64b5f6;
+  --color-prmsc-sky: #81d4fa;
+  --color-prmsc-cyan: #b2ebf2;
+  --color-prmsc-green: #2eaa50;
+  --color-prmsc-green-bright: #43a047;
+  --color-prmsc-green-light: #66bb6a;
+
+  --animate-shimmer: shimmer 8s ease-in-out infinite;
+  --animate-lines: lines-move 20s linear infinite;
+  --animate-glow-pulse: glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.35; transform: translateX(-8%); }
+  50% { opacity: 0.65; transform: translateX(8%); }
+}
+
+@keyframes lines-move {
+  0% { transform: translateY(0) rotate(-12deg); }
+  100% { transform: translateY(-50%) rotate(-12deg); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.7;
+    filter: blur(48px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(56px);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply m-0 min-h-screen bg-slate-50 font-sans text-slate-800 antialiased;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
