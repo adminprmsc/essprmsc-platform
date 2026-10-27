@@ -46,7 +46,7 @@ applications:
     health_check: curl -I https://wqms.essprmsc.com/healthz
 
   - slug: vld
-    name: VLD (Village Level Development)
+    name: VLD (Voluntary Land Donation)
     fqdn: vld.essprmsc.com
     vm_ip: 72.61.141.192
     github_repo: YOUR_ORG/vld  # update when repo is known

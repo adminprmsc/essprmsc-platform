@@ -80,7 +80,7 @@ const features = [
     icon: Layers,
     title: 'Integrated Module Suite',
     description:
-      'Four connected platforms — monitoring, workforce management, water quality, and village-level development — for end-to-end safeguard operations.',
+      'Four connected platforms — monitoring, workforce management, water quality, and voluntary land donation — for end-to-end safeguard operations.',
     className: 'md:col-span-2',
     accent: 'suite' as FeatureAccent,
     surface: 'from-sky-50/60 via-white to-emerald-50/40',

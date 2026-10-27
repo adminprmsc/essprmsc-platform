@@ -2,7 +2,7 @@ import type { LucideIcon } from 'lucide-react'
 import {
   ClipboardCheck,
   Droplets,
-  MapPin,
+  LandPlot,
   Users,
 } from 'lucide-react'
 
@@ -57,15 +57,15 @@ export const modules: ModuleLink[] = [
   },
   {
     id: 'vld',
-    name: 'Village Level Development',
+    name: 'Voluntary Land Donation',
     shortName: 'VLD',
-    tagline: 'Community & village-level programs',
+    tagline: 'Land donation records & verification',
     description:
-      'Platform for village-level development planning, field reporting, and program tracking aligned with rural municipal safeguard delivery.',
+      'System for registering voluntary land donations, tracking submissions, and supporting verification workflows under PRMSC safeguard programmes.',
     href: 'http://vld.essprmsc.com:8085/',
     accent: 'gold',
-    icon: MapPin,
-    features: ['Village program registry', 'Field reporting workflows', 'Progress tracking dashboards'],
+    icon: LandPlot,
+    features: ['Donation case registry', 'Submission & approval workflows', 'Verification reporting'],
   },
 ]
 
