@@ -9,6 +9,7 @@ Configure in your domain panel: **My Services → Domains List → essprmsc.com 
 | A | `mrv` | `101.50.87.168` | 300 |
 | A | `esms` | `115.186.164.190` | 300 |
 | A | `wqms` | `101.50.84.115` | 300 |
+| A | `vld` | `72.61.141.192` | 300 |
 
 ## Portal (root domain — optional)
 
@@ -25,7 +26,21 @@ Build: `cd landing && npm run build` — deploy `dist/` or Docker image.
 dig +short mrv.essprmsc.com   # → 101.50.87.168
 dig +short esms.essprmsc.com         # → 115.186.164.190
 dig +short wqms.essprmsc.com         # → 101.50.84.115
+dig +short vld.essprmsc.com          # → 72.61.141.192
 ```
+
+### VLD DNS (Nayatel panel)
+
+Add an **A** record only — DNS does not support port numbers in the record:
+
+| Type | Host / Name | Value (IP only) | TTL |
+|------|-------------|-----------------|-----|
+| A | `vld` | `72.61.141.192` | 300 |
+
+**Wrong (what caused “Invalid IPv4 address”):** Host = `72.61.141.192:8085`, Value = `vld`  
+**Correct:** Host = `vld`, Value = `72.61.141.192`
+
+The app listens on **port 8085** on the VM; that is configured on the server (or use `:8085` in the portal link), not in DNS.
 
 ## Notes
 

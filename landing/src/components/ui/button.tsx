@@ -13,6 +13,7 @@ const buttonVariants = cva(
           'bg-prmsc-green text-white shadow-md hover:bg-prmsc-green-bright focus-visible:ring-prmsc-green',
         blue: 'bg-prmsc-blue text-white shadow-md hover:bg-prmsc-blue-bright focus-visible:ring-prmsc-blue',
         teal: 'bg-prmsc-blue-bright text-white shadow-md hover:bg-prmsc-sky focus-visible:ring-prmsc-blue-bright',
+        gold: 'bg-amber-600 text-white shadow-md hover:bg-amber-500 focus-visible:ring-amber-500',
         outline:
           'border border-slate-200 bg-white text-slate-800 shadow-sm hover:bg-slate-50 focus-visible:ring-slate-400',
         ghost: 'hover:bg-slate-100 focus-visible:ring-slate-400',

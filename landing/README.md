@@ -6,7 +6,8 @@ Central landing page listing all PRMSC safeguard modules:
 |--------|------|
 | MRV System | http://mrv.essprmsc.com/hq |
 | ESMS | http://esms.essprmsc.com/dashboard/senior-manager |
-| WQMS | http://wqms.essprmsc.com/pcrwr |
+| WQMS | http://wqms.essprmsc.com/ |
+| VLD | http://vld.essprmsc.com:8085/ |
 
 ## Development
 

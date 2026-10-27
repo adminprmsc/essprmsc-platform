@@ -22,9 +22,9 @@ export function Hero() {
           transition={{ duration: 0.65, delay: 0.4 }}
           className="mt-14 text-center"
         >
-          <Eyebrow className="mb-4 text-prmsc-sky/90">Enterprise Portal</Eyebrow>
+          <Eyebrow className="mb-4 text-prmsc-sky/90">Official Portal</Eyebrow>
 
-          <DisplayTitle>ESS PRMSC Enterprise Portal</DisplayTitle>
+          <DisplayTitle>PRMSC ESS Portal</DisplayTitle>
 
           <Eyebrow className="mt-4 text-[10px] tracking-[0.32em] text-prmsc-cyan/80 sm:text-[11px]">
             Environment &amp; Social Safeguard Wing

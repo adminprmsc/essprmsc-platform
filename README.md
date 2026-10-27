@@ -6,12 +6,13 @@ Application code lives in **separate GitHub repos**. This repo is the single sou
 
 ## Production URLs
 
-| App | URL | VM IP | Application repo |
-|-----|-----|-------|------------------|
-| **Portal (landing)** | http://essprmsc.com | TBD | this repo → `landing/` |
-| MRV System | http://mrv.essprmsc.com | `101.50.87.168` | `prmsc-mrv` (separate repo) |
-| ESMS | http://esms.essprmsc.com | `115.186.164.190` | `wfm-esms` (separate repo) |
-| WQMS | http://wqms.essprmsc.com | `101.50.84.115` | `wqms` (separate repo) |
+| App                  | URL                      | VM IP             | Application repo            |
+| -------------------- | ------------------------ | ----------------- | --------------------------- |
+| **Portal (landing)** | http://essprmsc.com      | TBD               | this repo → `landing/`      |
+| MRV System           | http://mrv.essprmsc.com  | `101.50.87.168`   | `prmsc-mrv` (separate repo) |
+| ESMS                 | http://esms.essprmsc.com | `115.186.164.190` | `wfm-esms` (separate repo)  |
+| WQMS                 | http://wqms.essprmsc.com | `101.50.84.115`   | `wqms` (separate repo)      |
+| VLD                  | http://vld.essprmsc.com:8085 | `72.61.141.192` | separate repo (TBD)         |
 
 > Update repo names in `domains/registry.yaml` to match your GitHub org.
 

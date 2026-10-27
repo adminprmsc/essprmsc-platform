@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 
 type TypographyProps = React.HTMLAttributes<HTMLElement>
 
-/** Small caps eyebrow — enterprise section labels */
+/** Small caps eyebrow — section labels */
 export function Eyebrow({ className, ...props }: TypographyProps) {
   return (
     <p

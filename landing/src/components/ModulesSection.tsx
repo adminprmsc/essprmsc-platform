@@ -8,9 +8,9 @@ export function ModulesSection() {
     <section id="modules" className="scroll-mt-24">
       <FadeIn className="mb-12 text-center">
         <Eyebrow className="mb-3 text-prmsc-blue">Operational Systems</Eyebrow>
-        <Heading>One portal. Three operating surfaces.</Heading>
+        <Heading>One portal. Four operating surfaces.</Heading>
         <Subheading className="mt-4">
-          Select a module to access its dedicated enterprise workspace. All platforms
+          Select a module to access its dedicated workspace. All platforms
           launch securely in a new browser tab.
         </Subheading>
       </FadeIn>

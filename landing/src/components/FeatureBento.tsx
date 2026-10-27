@@ -78,9 +78,9 @@ const features = [
   {
     id: 'suite',
     icon: Layers,
-    title: 'Integrated Enterprise Suite',
+    title: 'Integrated Module Suite',
     description:
-      'Three connected platforms — monitoring, workforce management, and water quality — for end-to-end safeguard operations.',
+      'Four connected platforms — monitoring, workforce management, water quality, and village-level development — for end-to-end safeguard operations.',
     className: 'md:col-span-2',
     accent: 'suite' as FeatureAccent,
     surface: 'from-sky-50/60 via-white to-emerald-50/40',
@@ -208,7 +208,7 @@ export function FeatureBento() {
     <section className="mt-24">
       <FadeIn className="mb-12 text-center">
         <Eyebrow className="mb-3 text-prmsc-blue">Institutional Framework</Eyebrow>
-        <Heading>Built for enterprise governance</Heading>
+        <Heading>Built for institutional governance</Heading>
         <Subheading className="mt-4">
           PRMSC operates within Punjab&apos;s local government reform architecture,
           supported by World Bank funding and safeguard compliance frameworks.

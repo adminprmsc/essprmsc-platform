@@ -19,7 +19,7 @@ export function Footer() {
           </div>
 
           <div className="max-w-sm text-sm text-slate-500 lg:text-right">
-            <p className="font-medium text-slate-700">ESS PRMSC Enterprise Portal</p>
+            <p className="font-medium text-slate-700">PRMSC ESS Portal</p>
             <p className="mt-1 text-xs leading-relaxed">
               World Bank supported municipal reform programme
             </p>

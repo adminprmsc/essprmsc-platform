@@ -45,4 +45,14 @@ applications:
     env_public_origin: null
     health_check: curl -I https://wqms.essprmsc.com/healthz
 
+  - slug: vld
+    name: VLD (Village Level Development)
+    fqdn: vld.essprmsc.com
+    vm_ip: 72.61.141.192
+    github_repo: YOUR_ORG/vld  # update when repo is known
+    vm_app_path: TBD
+    tls_strategy: host-nginx-certbot
+    env_public_origin: null
+    health_check: curl -I http://vld.essprmsc.com:8085/
+
 # Future apps: copy an entry above, add DNS A record, follow runbooks/add-new-application.md
